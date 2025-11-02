@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- Título y descripción estándar -->
+  <!-- Título y descripción -->
   <title>NaoJaguar – creative useless apps lab</title>
   <meta name="description" content="Explora apps creativas, juegos sensoriales y experimentos visuales hechos por NaoJaguar." />
 
-  <!-- Open Graph para vistas previas (WhatsApp, Facebook, etc.) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="NaoJaguar" />
   <meta property="og:title" content="NaoJaguar – creative useless apps lab" />
@@ -18,7 +18,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- Twitter cards (también ayuda en algunos clientes) -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NaoJaguar – creative useless apps lab" />
   <meta name="twitter:description" content="Explora apps creativas, juegos sensoriales y experimentos visuales hechos por NaoJaguar." />
@@ -26,9 +26,37 @@
 
   <link rel="canonical" href="https://www.naojaguar.com/" />
   <meta name="theme-color" content="#0f141b"/>
+  <meta name="color-scheme" content="dark light" />
 
   <style>
-    /* tu CSS tal cual */
+    :root{
+      --bg:#0f141b; --panel:#121a23; --tile:#0e1520;
+      --muted:#9fb3c9; --accent:#6ab0ff; --grid:rgba(230,238,247,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#e6eef7;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+    h1{font-size:22px;margin:0}
+    .muted{color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+    .card{
+      background:var(--panel);border:1px solid var(--grid);border-radius:14px;
+      padding:16px;display:flex;flex-direction:column;align-items:center;text-align:center;
+      transition:transform .15s ease,border-color .15s ease;
+    }
+    .card:hover{transform:translateY(-4px);border-color:var(--accent)}
+    .logo{
+      width:70px;height:70px;border-radius:12px;background:var(--tile);
+      margin-bottom:10px;display:flex;align-items:center;justify-content:center;
+      font-size:28px;opacity:.9; overflow:hidden;
+    }
+    .logo img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+    .title{font-weight:600;font-size:16px;margin-bottom:6px}
+    .desc{color:#cfe0f3;font-size:13px;line-height:1.35}
+    footer{opacity:.6;margin-top:24px;font-size:12px;text-align:center}
+    .empty{opacity:.6;padding:20px;text-align:center;border:1px dashed var(--grid);border-radius:12px;background:#0c121a}
   </style>
 </head>
 
@@ -36,18 +64,19 @@
 <div class="wrap">
   <header>
     <div style="display:flex;align-items:center;gap:10px;">
-    <img src="https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2009_09_35%20PM.png" 
-         alt="NaoJaguar logo" width="80" height="80" style="filter:drop-shadow(0 0 4px #6ab0ff)">
-    <div>
-      <h1>NAOJAGUAR</h1>
-      <div class="muted">creative useless apps</div>
-    </div>
+      <img src="https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2009_09_35%20PM.png"
+           alt="NaoJaguar logo" width="80" height="80" style="border-radius:12px;filter:drop-shadow(0 0 4px #6ab0ff)">
+      <div>
+        <h1>NAOJAGUAR</h1>
+        <div class="muted">creative useless apps</div>
+      </div>
+    </div><!-- 👈 faltaba cerrar este div -->
   </header>
 
   <main id="list" class="grid"></main>
   <div id="empty" class="empty" style="display:none">No hay resultados para tu búsqueda.</div>
 
-  <footer>© <span id="year"></span> NaoJaguar</footer>
+  <footer>© <span id="year"></span> NaoJaguar — desplegado en Vercel</footer>
 </div>
 
 <script>
@@ -56,7 +85,7 @@ const state={all:[], filtered:[]};
 async function load(){
   try{
     const res=await fetch('./manifest.json?ts='+Date.now());
-    state.all=(await res.json()).filter(app => app.title !== "Puzzle Grid"); // 🔹 Filtramos Puzzle Grid
+    state.all=(await res.json()).filter(app => app.title !== "Puzzle Grid");
     state.filtered=state.all;
     render();
   }catch(e){
@@ -65,8 +94,9 @@ async function load(){
 }
 
 function card(app){
-  const logo = app.logo ? `<img class="logo" src="${app.logo}" alt="${app.title}">` 
-                        : `<div class="logo">🜲</div>`;
+  const logo = app.logo
+    ? `<div class="logo"><img src="${app.logo}" alt="${escapeHtml(app.title)}"></div>`
+    : `<div class="logo">🜲</div>`;
   return `
   <a href="${app.path}" target="_blank" rel="noopener" class="card">
     ${logo}
@@ -95,9 +125,7 @@ function filter(q){
 
 function escapeHtml(s){return (s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');}
 
-
 document.getElementById('year').textContent = new Date().getFullYear();
-
 load();
 </script>
 </body>
