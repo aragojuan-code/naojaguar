@@ -1,24 +1,72 @@
-
 [
   {
-    "slug": "anagramas",
-    "title": "Anagramas Visual",
-    "description": "Juega con anagramas y guarda combinaciones.",
-    "path": "/apps/anagramas/",
-    "tags": ["texto","juego","creatividad"]
+    "slug": "anagrama",
+    "title": "Anagramas en Vivo",
+    "description": "Juega con anagramas de nombres y frases; destaca letras válidas, repetidas y no permitidas.",
+    "path": "https://anagrama.naojaguar.com",
+    "tags": ["texto", "juego", "creatividad"]
   },
   {
-    "slug": "lissajous-3d",
+    "slug": "puzzleslide",
+    "title": "PuzzleSlide 9+1",
+    "description": "Rompecabezas fotográfico con tablero 3x3 + hueco, controles y animaciones suaves.",
+    "path": "https://puzzleslide.naojaguar.com",
+    "tags": ["juego", "puzzle", "imagen"]
+  },
+  {
+    "slug": "fotopuzzle",
+    "title": "FotoPuzzle",
+    "description": "Sube una foto y conviértela en puzzle interactivo con niveles de dificultad.",
+    "path": "https://fotopuzzle.naojaguar.com",
+    "tags": ["imagen", "puzzle", "herramienta"]
+  },
+  {
+    "slug": "puzzle",
+    "title": "Puzzle Grid",
+    "description": "Tablero creativo (cuadrícula/hex) con herramientas de color, borrar y deshacer.",
+    "path": "https://puzzle.naojaguar.com",
+    "tags": ["juego", "diseño", "grid"]
+  },
+  {
+    "slug": "lissajous3d",
     "title": "Lissajous 3D",
-    "description": "Generador de curvas 3D con control en vivo.",
-    "path": "/apps/lissajous-3d/",
-    "tags": ["3D","math","arte"]
+    "description": "Genera curvas 3D tipo armonógrafo con parámetros en vivo y vista orbital.",
+    "path": "https://lissajous3d.naojaguar.com",
+    "tags": ["3D", "matemáticas", "arte"]
   },
   {
-    "slug": "stop-motion-10",
+    "slug": "stopmotion",
     "title": "Stop-Motion 10",
-    "description": "Cámara stop-motion con onion-skin.",
-    "path": "/apps/stop-motion-10/",
-    "tags": ["cámara","video"]
+    "description": "Cámara stop-motion con onion-skin y control de secuencias; pensado para móvil.",
+    "path": "https://stopmotion.naojaguar.com",
+    "tags": ["cámara", "vídeo", "creatividad"]
+  },
+  {
+    "slug": "azimut",
+    "title": "Azimut",
+    "description": "Juguete de orientación y ángulos con sensor de movimiento y retos.",
+    "path": "https://azimut.naojaguar.com",
+    "tags": ["sensor", "juego", "orientación"]
+  },
+  {
+    "slug": "flor",
+    "title": "Flor Generativa",
+    "description": "Generador de flores y patrones orgánicos con controles sencillos.",
+    "path": "https://flor.naojaguar.com",
+    "tags": ["arte", "generativo", "dibujo"]
+  },
+  {
+    "slug": "reversevoice",
+    "title": "Reverse Voice",
+    "description": "Graba una frase y reprodúcela al revés para jugar y aprender fonética.",
+    "path": "https://reversevoice.naojaguar.com",
+    "tags": ["audio", "juego", "voz"]
+  },
+  {
+    "slug": "mosaic",
+    "title": "Mosaic",
+    "description": "Crea mosaicos generativos a partir de imágenes o patrones básicos.",
+    "path": "https://mosaic.naojaguar.com",
+    "tags": ["arte", "mosaico", "imagen"]
   }
 ]
