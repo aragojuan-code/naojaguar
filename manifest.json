@@ -2,71 +2,64 @@
   {
     "slug": "anagrama",
     "title": "Anagramas en Vivo",
-    "description": "Juega con anagramas de nombres y frases; destaca letras válidas, repetidas y no permitidas.",
+    "description": "Forma palabras nuevas y descubre combinaciones ocultas.",
     "path": "https://anagrama.naojaguar.com",
-    "tags": ["texto", "juego", "creatividad"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_38_00%20PM.png"
   },
   {
     "slug": "puzzleslide",
     "title": "PuzzleSlide 9+1",
-    "description": "Rompecabezas fotográfico con tablero 3x3 + hueco, controles y animaciones suaves.",
+    "description": "Mueve las piezas hasta recomponer la imagen.",
     "path": "https://puzzleslide.naojaguar.com",
-    "tags": ["juego", "puzzle", "imagen"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_39_41%20PM.png"
   },
   {
     "slug": "fotopuzzle",
     "title": "FotoPuzzle",
-    "description": "Sube una foto y conviértela en puzzle interactivo con niveles de dificultad.",
+    "description": "Convierte tus fotos en divertidos rompecabezas.",
     "path": "https://fotopuzzle.naojaguar.com",
-    "tags": ["imagen", "puzzle", "herramienta"]
-  },
-  {
-    "slug": "puzzle",
-    "title": "Puzzle Grid",
-    "description": "Tablero creativo (cuadrícula/hex) con herramientas de color, borrar y deshacer.",
-    "path": "https://puzzle.naojaguar.com",
-    "tags": ["juego", "diseño", "grid"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_43_41%20PM.png"
   },
   {
     "slug": "lissajous3d",
     "title": "Lissajous 3D",
-    "description": "Genera curvas 3D tipo armonógrafo con parámetros en vivo y vista orbital.",
+    "description": "Dibuja curvas en movimiento y explora sus formas.",
     "path": "https://lissajous3d.naojaguar.com",
-    "tags": ["3D", "matemáticas", "arte"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_43_48%20PM.png"
   },
   {
     "slug": "stopmotion",
     "title": "Stop-Motion 10",
-    "description": "Cámara stop-motion con onion-skin y control de secuencias; pensado para móvil.",
+    "description": "Crea animaciones cuadro a cuadro con tu cámara.",
     "path": "https://stopmotion.naojaguar.com",
-    "tags": ["cámara", "vídeo", "creatividad"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_43_52%20PM.png"
   },
   {
     "slug": "azimut",
     "title": "Azimut",
-    "description": "Juguete de orientación y ángulos con sensor de movimiento y retos.",
+    "description": "Mueve y orienta el dispositivo para superar retos.",
     "path": "https://azimut.naojaguar.com",
-    "tags": ["sensor", "juego", "orientación"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_45_30%20PM.png"
   },
   {
     "slug": "flor",
     "title": "Flor Generativa",
-    "description": "Generador de flores y patrones orgánicos con controles sencillos.",
+    "description": "Crea flores únicas que cambian con cada toque.",
     "path": "https://flor.naojaguar.com",
-    "tags": ["arte", "generativo", "dibujo"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_46_42%20PM.png"
   },
   {
     "slug": "reversevoice",
     "title": "Reverse Voice",
-    "description": "Graba una frase y reprodúcela al revés para jugar y aprender fonética.",
+    "description": "Graba tu voz y escúchala al revés para adivinar frases.",
     "path": "https://reversevoice.naojaguar.com",
-    "tags": ["audio", "juego", "voz"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_47_37%20PM.png"
   },
   {
     "slug": "mosaic",
     "title": "Mosaic",
-    "description": "Crea mosaicos generativos a partir de imágenes o patrones básicos.",
+    "description": "Juega con colores y crea tus propios patrones pixelados.",
     "path": "https://mosaic.naojaguar.com",
-    "tags": ["arte", "mosaico", "imagen"]
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_50_02%20PM.png"
   }
 ]
