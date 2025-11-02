@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>NaoJaguar – Apps de Juan</title>
+<title>NaoJaguar – Apps y juguetes creativos</title>
 <meta name="theme-color" content="#0f141b"/>
 <style>
   :root{
@@ -12,46 +12,35 @@
   }
   *{box-sizing:border-box}
   html,body{height:100%;margin:0;background:var(--bg);color:#e6eef7;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+  a{text-decoration:none;color:inherit}
   .wrap{max-width:1100px;margin:0 auto;padding:20px}
-  header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
-  h1{font-size:20px;margin:0}
-  .muted{color:var(--muted)}
-  .search{flex:1;display:flex;gap:8px;align-items:center}
+  header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+  h1{font-size:22px;margin:0}
+  .muted{color:var(--muted);font-size:14px}
+  .search{flex:1;display:flex;gap:8px;align-items:center;min-width:260px}
   input[type="search"]{
     width:100%;background:var(--tile);border:1px solid var(--grid);color:#e6eef7;
     padding:10px 12px;border-radius:10px;outline:none;font-size:14px;
   }
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
   .card{
     background:var(--panel);border:1px solid var(--grid);border-radius:14px;
-    padding:14px;display:flex;flex-direction:column;gap:10px;min-height:160px;
-    transition:transform .15s ease, border-color .15s ease;
+    padding:16px;display:flex;flex-direction:column;align-items:center;text-align:center;
+    transition:transform .15s ease,border-color .15s ease;
   }
-  .card:hover{transform:translateY(-2px);border-color:var(--accent)}
-  .title{font-weight:700}
+  .card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .logo{
+    width:70px;height:70px;border-radius:12px;background:var(--tile);
+    margin-bottom:10px;display:flex;align-items:center;justify-content:center;
+    font-size:28px;opacity:.7;
+  }
+  .title{font-weight:600;font-size:16px;margin-bottom:6px}
   .desc{color:#cfe0f3;font-size:13px;line-height:1.35}
-  .tags{display:flex;flex-wrap:wrap;gap:8px}
-  .tag{font-size:11px;color:#bcd0e6;border:1px solid var(--grid);padding:4px 8px;border-radius:999px;background:var(--tile)}
-  .row{display:flex;gap:10px;align-items:center;justify-content:space-between}
-  .btn{background:var(--tile);border:1px solid var(--grid);color:#e6eef7;padding:8px 12px;border-radius:10px;cursor:pointer;font-size:14px;text-decoration:none;text-align:center}
-  .btn:hover{border-color:var(--accent)}
-  footer{opacity:.7;margin-top:18px;font-size:12px}
+  footer{opacity:.6;margin-top:24px;font-size:12px;text-align:center}
   .empty{opacity:.6;padding:20px;text-align:center;border:1px dashed var(--grid);border-radius:12px;background:#0c121a}
 </style>
 </head>
 <body>
-  <section id="apps" style="display:grid;gap:10px;margin-top:20px;">
-  <a href="https://anagrama.naojaguar.com" target="_blank">Anagrama</a>
-  <a href="https://puzzleslide.naojaguar.com" target="_blank">PuzzleSlide</a>
-  <a href="https://fotopuzzle.naojaguar.com" target="_blank">FotoPuzzle</a>
-  <a href="https://lissajous3d.naojaguar.com" target="_blank">Lissajous 3D</a>
-  <a href="https://stopmotion.naojaguar.com" target="_blank">StopMotion 10</a>
-  <a href="https://azimut.naojaguar.com" target="_blank">Azimut</a>
-  <a href="https://flor.naojaguar.com" target="_blank">Flor</a>
-  <a href="https://reversevoice.naojaguar.com" target="_blank">Reverse Voice</a>
-  <a href="https://mosaic.naojaguar.com" target="_blank">Mosaic</a>
-</section>
-
 <div class="wrap">
   <header>
     <div>
@@ -59,15 +48,14 @@
       <div class="muted">Apps y juguetes creativos</div>
     </div>
     <div class="search">
-      <input id="q" type="search" placeholder="Buscar por nombre o tag… (p.ej., cámara, 3D, anagrama)">
-      <a class="btn" href="mailto:contact@naojaguar.com">Contacto</a>
+      <input id="q" type="search" placeholder="Buscar app... (p.ej. cámara, 3D, anagrama)">
     </div>
   </header>
 
   <main id="list" class="grid"></main>
   <div id="empty" class="empty" style="display:none">No hay resultados para tu búsqueda.</div>
 
-  <footer class="muted">© <span id="year"></span> NaoJaguar — desplegado en Vercel</footer>
+  <footer>© <span id="year"></span> NaoJaguar — desplegado en Vercel</footer>
 </div>
 
 <script>
@@ -76,7 +64,7 @@ const state={all:[], filtered:[]};
 async function load(){
   try{
     const res=await fetch('./manifest.json?ts='+Date.now());
-    state.all=await res.json();
+    state.all=(await res.json()).filter(app => app.title !== "Puzzle Grid"); // 🔹 Filtramos Puzzle Grid
     state.filtered=state.all;
     render();
   }catch(e){
@@ -85,17 +73,14 @@ async function load(){
 }
 
 function card(app){
-  const t = (app.tags||[]).map(tag=>`<span class="tag">${escapeHtml(tag)}</span>`).join('');
+  const logo = app.logo ? `<img class="logo" src="${app.logo}" alt="${app.title}">` 
+                        : `<div class="logo">🜲</div>`;
   return `
-  <article class="card">
+  <a href="${app.path}" target="_blank" rel="noopener" class="card">
+    ${logo}
     <div class="title">${escapeHtml(app.title)}</div>
     <div class="desc">${escapeHtml(app.description||'')}</div>
-    <div class="tags">${t}</div>
-    <div class="row">
-      <a class="btn" href="${app.path}" target="_blank" rel="noopener">Abrir</a>
-      <a class="btn" href="${app.path}" download>Descargar</a>
-    </div>
-  </article>`;
+  </a>`;
 }
 
 function render(){
@@ -110,7 +95,7 @@ function filter(q){
   q=q.trim().toLowerCase();
   if(!q){ state.filtered=state.all; render(); return; }
   state.filtered=state.all.filter(a=>{
-    const hay = [a.title,a.description,(a.tags||[]).join(' ')].join(' ').toLowerCase();
+    const hay = [a.title,a.description].join(' ').toLowerCase();
     return hay.includes(q);
   });
   render();
