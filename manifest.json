@@ -1,1 +1,24 @@
 
+[
+  {
+    "slug": "anagramas",
+    "title": "Anagramas Visual",
+    "description": "Juega con anagramas y guarda combinaciones.",
+    "path": "/apps/anagramas/",
+    "tags": ["texto","juego","creatividad"]
+  },
+  {
+    "slug": "lissajous-3d",
+    "title": "Lissajous 3D",
+    "description": "Generador de curvas 3D con control en vivo.",
+    "path": "/apps/lissajous-3d/",
+    "tags": ["3D","math","arte"]
+  },
+  {
+    "slug": "stop-motion-10",
+    "title": "Stop-Motion 10",
+    "description": "Cámara stop-motion con onion-skin.",
+    "path": "/apps/stop-motion-10/",
+    "tags": ["cámara","video"]
+  }
+]
