@@ -1,64 +1,64 @@
 [
   {
     "slug": "anagrama",
-    "title": "Anagramas en Vivo",
-    "description": "Forma palabras nuevas y descubre combinaciones ocultas.",
+    "title": "Palabras Secretas",
+    "description": "Descubre las combinaciones ocultas que se esconden en tu nombre o frase.",
     "path": "https://anagrama.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_38_00%20PM.png"
   },
   {
     "slug": "puzzleslide",
-    "title": "PuzzleSlide 9+1",
-    "description": "Mueve las piezas hasta recomponer la imagen.",
+    "title": "Desliza & Encaja",
+    "description": "Mueve las piezas hasta devolver la armonía a la imagen.",
     "path": "https://puzzleslide.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_39_41%20PM.png"
   },
   {
     "slug": "fotopuzzle",
-    "title": "FotoPuzzle",
-    "description": "Convierte tus fotos en divertidos rompecabezas.",
+    "title": "RompeFoto",
+    "description": "Convierte tus fotos favoritas en rompecabezas para resolver y compartir.",
     "path": "https://fotopuzzle.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_43_41%20PM.png"
   },
   {
     "slug": "lissajous3d",
-    "title": "Lissajous 3D",
-    "description": "Dibuja curvas en movimiento y explora sus formas.",
+    "title": "Curvas del Aire",
+    "description": "Dibuja ondas en movimiento y explora la geometría invisible del sonido.",
     "path": "https://lissajous3d.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_43_48%20PM.png"
   },
   {
     "slug": "stopmotion",
-    "title": "Stop-Motion 10",
-    "description": "Crea animaciones cuadro a cuadro con tu cámara.",
+    "title": "Animágica",
+    "description": "Da vida a tus ideas cuadro a cuadro y crea tus propias mini animaciones.",
     "path": "https://stopmotion.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_43_52%20PM.png"
   },
   {
     "slug": "azimut",
-    "title": "Azimut",
-    "description": "Mueve y orienta el dispositivo para superar retos.",
+    "title": "Brújula Lúdica",
+    "description": "Usa el movimiento de tu cuerpo para orientar el mundo y superar retos espaciales.",
     "path": "https://azimut.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_45_30%20PM.png"
   },
   {
     "slug": "flor",
-    "title": "Flor Generativa",
-    "description": "Crea flores únicas que cambian con cada toque.",
+    "title": "FlorÁurea",
+    "description": "Diseña flores únicas que crecen con tu toque y tu intuición.",
     "path": "https://flor.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_46_42%20PM.png"
   },
   {
     "slug": "reversevoice",
-    "title": "Reverse Voice",
-    "description": "Graba tu voz y escúchala al revés para adivinar frases.",
+    "title": "Eco Invertido",
+    "description": "Graba tu voz, escúchala al revés y adivina el mensaje oculto.",
     "path": "https://reversevoice.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_47_37%20PM.png"
   },
   {
     "slug": "mosaic",
-    "title": "Mosaic",
-    "description": "Juega con colores y crea tus propios patrones pixelados.",
+    "title": "Laboratorio de Mosaicos",
+    "description": "Juega con geometrías y colores para crear tus propios universos visuales.",
     "path": "https://mosaic.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_50_02%20PM.png"
   }
