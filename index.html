@@ -1,45 +1,37 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>NAOJAGUAR</title>
-<meta name="theme-color" content="#0f141b"/>
-<style>
-  :root{
-    --bg:#0f141b; --panel:#121a23; --tile:#0e1520;
-    --muted:#9fb3c9; --accent:#6ab0ff; --grid:rgba(230,238,247,.12);
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%;margin:0;background:var(--bg);color:#e6eef7;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
-  a{text-decoration:none;color:inherit}
-  .wrap{max-width:1100px;margin:0 auto;padding:20px}
-  header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px;flex-wrap:wrap}
-  h1{font-size:22px;margin:0}
-  .muted{color:var(--muted);font-size:14px}
-  .search{flex:1;display:flex;gap:8px;align-items:center;min-width:260px}
-  input[type="search"]{
-    width:100%;background:var(--tile);border:1px solid var(--grid);color:#e6eef7;
-    padding:10px 12px;border-radius:10px;outline:none;font-size:14px;
-  }
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
-  .card{
-    background:var(--panel);border:1px solid var(--grid);border-radius:14px;
-    padding:16px;display:flex;flex-direction:column;align-items:center;text-align:center;
-    transition:transform .15s ease,border-color .15s ease;
-  }
-  .card:hover{transform:translateY(-4px);border-color:var(--accent)}
-  .logo{
-    width:70px;height:70px;border-radius:12px;background:var(--tile);
-    margin-bottom:10px;display:flex;align-items:center;justify-content:center;
-    font-size:28px;opacity:.7;
-  }
-  .title{font-weight:600;font-size:16px;margin-bottom:6px}
-  .desc{color:#cfe0f3;font-size:13px;line-height:1.35}
-  footer{opacity:.6;margin-top:24px;font-size:12px;text-align:center}
-  .empty{opacity:.6;padding:20px;text-align:center;border:1px dashed var(--grid);border-radius:12px;background:#0c121a}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Título y descripción estándar -->
+  <title>NaoJaguar – Laboratorio de juegos y arte digital</title>
+  <meta name="description" content="Explora apps creativas, juegos sensoriales y experimentos visuales hechos por NaoJaguar." />
+
+  <!-- Open Graph para vistas previas (WhatsApp, Facebook, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NaoJaguar" />
+  <meta property="og:title" content="NaoJaguar – Laboratorio de juegos y arte digital" />
+  <meta property="og:description" content="Explora apps creativas, juegos sensoriales y experimentos visuales hechos por NaoJaguar." />
+  <meta property="og:url" content="https://www.naojaguar.com/" />
+  <meta property="og:image" content="https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/logo-naojaguar-og-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter cards (también ayuda en algunos clientes) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NaoJaguar – Laboratorio de juegos y arte digital" />
+  <meta name="twitter:description" content="Explora apps creativas, juegos sensoriales y experimentos visuales hechos por NaoJaguar." />
+  <meta name="twitter:image" content="https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/logo-naojaguar-og-1200x630.png" />
+
+  <link rel="canonical" href="https://www.naojaguar.com/" />
+  <meta name="theme-color" content="#0f141b"/>
+
+  <style>
+    /* tu CSS tal cual */
+  </style>
 </head>
+
 <body>
 <div class="wrap">
   <header>
