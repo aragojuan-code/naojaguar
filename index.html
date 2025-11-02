@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NaoJaguar – Apps de Juan</title>
+<meta name="theme-color" content="#0f141b"/>
+<style>
+  :root{
+    --bg:#0f141b; --panel:#121a23; --tile:#0e1520;
+    --muted:#9fb3c9; --accent:#6ab0ff; --grid:rgba(230,238,247,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:var(--bg);color:#e6eef7;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+  .wrap{max-width:1100px;margin:0 auto;padding:20px}
+  header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+  h1{font-size:20px;margin:0}
+  .muted{color:var(--muted)}
+  .search{flex:1;display:flex;gap:8px;align-items:center}
+  input[type="search"]{
+    width:100%;background:var(--tile);border:1px solid var(--grid);color:#e6eef7;
+    padding:10px 12px;border-radius:10px;outline:none;font-size:14px;
+  }
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+  .card{
+    background:var(--panel);border:1px solid var(--grid);border-radius:14px;
+    padding:14px;display:flex;flex-direction:column;gap:10px;min-height:160px;
+    transition:transform .15s ease, border-color .15s ease;
+  }
+  .card:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .title{font-weight:700}
+  .desc{color:#cfe0f3;font-size:13px;line-height:1.35}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{font-size:11px;color:#bcd0e6;border:1px solid var(--grid);padding:4px 8px;border-radius:999px;background:var(--tile)}
+  .row{display:flex;gap:10px;align-items:center;justify-content:space-between}
+  .btn{background:var(--tile);border:1px solid var(--grid);color:#e6eef7;padding:8px 12px;border-radius:10px;cursor:pointer;font-size:14px;text-decoration:none;text-align:center}
+  .btn:hover{border-color:var(--accent)}
+  footer{opacity:.7;margin-top:18px;font-size:12px}
+  .empty{opacity:.6;padding:20px;text-align:center;border:1px dashed var(--grid);border-radius:12px;background:#0c121a}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>NaoJaguar</h1>
+      <div class="muted">Apps y juguetes creativos</div>
+    </div>
+    <div class="search">
+      <input id="q" type="search" placeholder="Buscar por nombre o tag… (p.ej., cámara, 3D, anagrama)">
+      <a class="btn" href="mailto:contact@naojaguar.com">Contacto</a>
+    </div>
+  </header>
+
+  <main id="list" class="grid"></main>
+  <div id="empty" class="empty" style="display:none">No hay resultados para tu búsqueda.</div>
+
+  <footer class="muted">© <span id="year"></span> NaoJaguar — desplegado en Vercel</footer>
+</div>
+
+<script>
+const state={all:[], filtered:[]};
+
+async function load(){
+  try{
+    const res=await fetch('./manifest.json?ts='+Date.now());
+    state.all=await res.json();
+    state.filtered=state.all;
+    render();
+  }catch(e){
+    document.getElementById('list').innerHTML='<div class="empty">Sube un manifest.json con tus apps.</div>';
+  }
+}
+
+function card(app){
+  const t = (app.tags||[]).map(tag=>`<span class="tag">${escapeHtml(tag)}</span>`).join('');
+  return `
+  <article class="card">
+    <div class="title">${escapeHtml(app.title)}</div>
+    <div class="desc">${escapeHtml(app.description||'')}</div>
+    <div class="tags">${t}</div>
+    <div class="row">
+      <a class="btn" href="${app.path}" target="_blank" rel="noopener">Abrir</a>
+      <a class="btn" href="${app.path}" download>Descargar</a>
+    </div>
+  </article>`;
+}
+
+function render(){
+  const list=document.getElementById('list');
+  const empty=document.getElementById('empty');
+  if(state.filtered.length===0){ list.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display='none';
+  list.innerHTML=state.filtered.map(card).join('');
+}
+
+function filter(q){
+  q=q.trim().toLowerCase();
+  if(!q){ state.filtered=state.all; render(); return; }
+  state.filtered=state.all.filter(a=>{
+    const hay = [a.title,a.description,(a.tags||[]).join(' ')].join(' ').toLowerCase();
+    return hay.includes(q);
+  });
+  render();
+}
+
+function escapeHtml(s){return (s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');}
+
+document.getElementById('q').addEventListener('input', e=>filter(e.target.value));
+document.getElementById('year').textContent = new Date().getFullYear();
+
+load();
+</script>
+</body>
+</html>
