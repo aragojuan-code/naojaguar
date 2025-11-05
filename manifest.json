@@ -1,5 +1,12 @@
 [
   {
+  "slug": "armonicos",
+  "title": "Órbitas",
+  "description": "Traza corazones, estrellas y símbolos infinitos con el movimiento de pequeños mundos.",
+  "path": "https://armonicos.naojaguar.com",
+  "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/orbitas_logo.png"
+},
+  {
   "slug": "swiper",
   "title": "Swiper — Salvar a la Princesa",
   "description": "Aventura de cartas tipo swipe a través de 4 mundos. Desliza izquierda/derecha para decidir; solo una ruta conduce a la princesa.",
