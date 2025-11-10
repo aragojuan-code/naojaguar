@@ -10,7 +10,7 @@
     "slug": "comparator",
     "title": "Comparador de imágenes",
     "description": "Superpone dos imágenes con transparencia, flechas, círculos y texto para analizar diferencias y exportar vídeo o PNG.",
-    "path": "https://comparador.naojaguar.com",
+    "path": "https://comparator.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/comparador_logo.png"
   },
   {
