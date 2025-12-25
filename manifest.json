@@ -83,4 +83,12 @@
     "path": "https://mosaic.naojaguar.com",
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_50_02%20PM.png"
   }
+  {
+  "slug": "menos15-voz",
+  "title": "Menos 15 · Voz",
+  "description": "Di un número y escucha la cifra con al menos un 15% menos (⌊0,85×n⌋).",
+  "path": "https://menos15-voz.naojaguar.com",
+  "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/menos15_voz_logo.png"
+}
+
 ]
