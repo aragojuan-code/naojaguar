@@ -1,11 +1,18 @@
 [
   {
-  "slug": "armonicos",
-  "title": "Órbitas",
-  "description": "Traza corazones, estrellas y símbolos infinitos con el movimiento de pequeños mundos.",
-  "path": "https://armonicos.naojaguar.com",
-  "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/orbitas_logo.png"
-},
+    "slug": "armonicos",
+    "title": "Órbitas",
+    "description": "Traza corazones, estrellas y símbolos infinitos con el movimiento de pequeños mundos.",
+    "path": "https://armonicos.naojaguar.com",
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/orbitas_logo.png"
+  },
+  {
+    "slug": "melodyswap",
+    "title": "Melody Swap",
+    "description": "Reordena columnas de colores intercambiándolas de dos en dos hasta reconstruir la melodía correcta.",
+    "path": "https://melodyswap.naojaguar.com",
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/melodyswap_logo.png"
+  },
   {
     "slug": "comparator",
     "title": "Comparador de imágenes",
@@ -14,12 +21,12 @@
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/comparador_logo.png"
   },
   {
-  "slug": "swiper",
-  "title": "Swiper — Salvar a la Princesa",
-  "description": "Aventura de cartas tipo swipe a través de 4 mundos. Desliza izquierda/derecha para decidir; solo una ruta conduce a la princesa.",
-  "path": "https://swiper.naojaguar.com",
-  "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/swiper/el_bosque_de_los_carta_1_despertar.png"
-},
+    "slug": "swiper",
+    "title": "Swiper — Salvar a la Princesa",
+    "description": "Aventura de cartas tipo swipe a través de 4 mundos. Desliza izquierda/derecha para decidir; solo una ruta conduce a la princesa.",
+    "path": "https://swiper.naojaguar.com",
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/swiper/el_bosque_de_los_carta_1_despertar.png"
+  },
   {
     "slug": "anagrama",
     "title": "Palabras Secretas",
@@ -84,10 +91,10 @@
     "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Nov%202,%202025,%2008_50_02%20PM.png"
   },
   {
-  "slug": "menos15-voz",
-  "title": "Menos 15 · Voz",
-  "description": "Di un número y escucha la cifra con al menos un 15% menos (⌊0,85×n⌋).",
-  "path": "https://menos15-voz.naojaguar.com",
-  "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/-15.png"
-}
+    "slug": "menos15-voz",
+    "title": "Menos 15 · Voz",
+    "description": "Di un número y escucha la cifra con al menos un 15% menos (⌊0,85×n⌋).",
+    "path": "https://menos15-voz.naojaguar.com",
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/-15.png"
+  }
 ]
