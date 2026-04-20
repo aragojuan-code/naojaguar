@@ -1,5 +1,12 @@
 [
   {
+  "slug": "3doku",
+  "title": "3Doku",
+  "description": "Puzzle lógico en 3D sobre un tetraedro",
+  "path": "https://3doku.naojaguar.com",
+  "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/ChatGPT%20Image%20Apr%2020,%202026,%2010_21_52%20PM.png"
+}
+  {
     "slug": "armonicos",
     "title": "Órbitas",
     "description": "Traza corazones, estrellas y símbolos infinitos con el movimiento de pequeños mundos.",
