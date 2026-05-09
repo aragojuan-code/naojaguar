@@ -1,5 +1,12 @@
 [
   {
+  "slug": "fruit-roll",
+  "title": "Fruit Roll",
+  "description": "Un puzzle 3D de frutas, giros y geometría: rueda, combina y haz combos.",
+  "path": "https://fruit-roll.naojaguar.com",
+  "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/4d8dbf84-0923-4645-b34f-299c256aa4cb.png"
+},
+  {
   "slug": "3doku",
   "title": "3Doku",
   "description": "Puzzle lógico en 3D sobre un tetraedro",
