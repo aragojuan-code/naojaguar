@@ -5,7 +5,21 @@
   "description": "Un puzzle 3D de frutas, giros y geometría: rueda, combina y haz combos.",
   "path": "https://fruit-roll.naojaguar.com",
   "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/4d8dbf84-0923-4645-b34f-299c256aa4cb.png"
-},
+},{
+
+    "slug": "360cam",
+
+    "title": "360Cam",
+
+    "description": "Crea una foto esfera con el móvil y explórala como un mundo 360 giratorio.",
+
+    "path": "https://360cam.naojaguar.com",
+
+    "logo": "https://rdoivmucgucouauyqdos.supabase.co/storage/v1/object/public/naojaguar/WhatsApp%20Image%202026-05-15%20at%2015.54.49.jpeg"
+
+  }
+,
+
   {
   "slug": "3doku",
   "title": "3Doku",
