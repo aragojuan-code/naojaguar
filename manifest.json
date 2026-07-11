@@ -1,4 +1,10 @@
 [ {
+  "slug": "language",
+  "title": "Parole Rete",
+  "description": "Aprendizaje bidireccional de italiano y español mediante tarjetas, pistas, fichas completas y una red navegable de palabras relacionadas.",
+  "path": "https://language.naojaguar.com",
+  "logo": ""
+},{
   "slug": "nostri-posti",
   "title": "Nostri Posti",
   "description": "Nuestro archivo personal de restaurantes, hoteles, heladerías, lugares naturales y experiencias, con valoraciones, fotos y rankings.",
