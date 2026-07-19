@@ -1,4 +1,10 @@
 [ {
+  "slug": "cubo-vivo",
+  "title": "cubo vivo",
+  "description": "Aguanta sin que se destruya el nucleo!.",
+  "path": "https://cubo-vivo.naojaguar.com",
+  "logo": ""
+},{
   "slug": "language",
   "title": "Parole Rete",
   "description": "Aprendizaje bidireccional de italiano y español mediante tarjetas, pistas, fichas completas y una red navegable de palabras relacionadas.",
