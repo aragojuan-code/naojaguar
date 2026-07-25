@@ -1,4 +1,10 @@
 [ {
+  "slug": "continuum",
+  "title": "continuum",
+  "description": "resuelve el puzle sin fin",
+  "path": "https://continuum.naojaguar.com",
+  "logo": ""
+},{
   "slug": "cubo-vivo",
   "title": "cubo vivo",
   "description": "Aguanta sin que se destruya el nucleo!.",
